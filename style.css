@@ -1,0 +1,270 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+:root {
+    --black: hsl(0, 0%, 7%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    --grey-100: hsl(214 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 70%);
+    --purple-500: hsl(263, 55%, 52%);
+
+    --text-preset-1-size: 1.25rem;
+    --text-preset-1-line-height: 120%; 
+    --text-preset-1-letter-spacing: 0em;
+    --text-preset-1-font-weight: 600;
+
+    --text-preset-2-size: 0.8125rem; 
+    --text-preset-2-line-height: 110%; 
+    --text-preset-2-letter-spacing: 0em;
+    --text-preset-2-font-weight: 500;
+
+    --text-preset-3-size: 0.8125rem; 
+    --text-preset-3-line-height: 135%; 
+    --text-preset-3-letter-spacing: 0em;
+    --text-preset-3-font-weight: 500;
+
+    --text-preset-4-size: 0.6875rem;
+    --text-preset-4-line-height: 110%; 
+    --text-preset-4-letter-spacing: 0em;
+    --text-preset-4-font-weight: 500;
+}
+
+.text-preset-1 {
+  font-size: var(--text-preset-1-size);
+  line-height: var(--text-preset-1-line-height);
+  letter-spacing: var(--text-preset-1-letter-spacing);
+  font-weight: var(--text-preset-1-font-weight);
+}
+
+.text-preset-2 {
+  font-size: var(--text-preset-2-size);
+  line-height: var(--text-preset-2-line-height);
+  letter-spacing: var(--text-preset-2-letter-spacing);
+  font-weight: var(--text-preset-2-font-weight);
+}
+
+
+.text-preset-3 {
+  font-size: var(--text-preset-3-size);
+  line-height: var(--text-preset-3-line-height);
+  letter-spacing: var(--text-preset-3-letter-spacing);
+  font-weight: var(--text-preset-3-font-weight);
+}
+
+.text-preset-4 {
+  font-size: var(--text-preset-4-size);
+  line-height: var(--text-preset-4-line-height);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+  font-weight: var(--text-preset-4-font-weight);
+}
+
+.white { 
+  color: var(--white);
+}
+
+.purple-50 { 
+  color: var(--purple-50);
+}
+
+.grey-100 { 
+  color: var(--grey-100);
+}
+
+.grey-200 { 
+  color: var(--grey-200);
+}
+
+.grey-300 {
+  color: #A3AAB4
+}
+
+.grey-400 {
+  color: var(--grey-400);
+}
+
+.grey-500 {
+  color: var(--grey-500);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', sans-serif;
+  background-color: #F6F5F6;
+}
+
+p { 
+  margin: 0; 
+}
+
+.testimonials { 
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem; 
+  margin: 0 auto;
+}
+
+.testimonials .section, .first-section, .second-section { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 2rem;
+}
+
+#decoration { 
+  display: none;
+}
+
+.card {
+  width: auto;
+  box-shadow: 2.5rem 3.75rem 3.125rem -2.94rem #48556A;
+  border-radius: 0.5rem; 
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; 
+  gap: 1rem;
+}
+
+.card-image { 
+  width:  1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+
+.card-image-radius-purple { 
+  border: 0.25rem solid var(--purple-300);
+}
+
+.card-header { 
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-purple {
+  position: relative; 
+  overflow: hidden; 
+  background-color: var(--purple-500);
+}
+
+.card-bg-decorator {
+  position: absolute;
+  top: 0;
+  right: 4rem;
+  width: 7.5rem;  
+  height: 6.375rem;
+  z-index: 0;   
+}
+
+.card-bg-decorator img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; 
+  object-fit: contain;
+}
+
+.card-grey { 
+  background-color: var(--grey-500);
+}
+
+.card-white {
+  background-color: var(--white);
+}
+
+.card-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+/* Tablet layout */
+
+@media only screen and (min-width: 48rem) and (max-width: 64rem) {
+  .testimonials .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card-1 {
+    grid-column: 1 / -1; 
+  }
+
+  .card-2 {
+    grid-column: 1; 
+  }
+
+  .card-3 {
+    grid-column: 2; 
+  }
+
+  .card-4 {
+    grid-column: 1 / -1;
+  }
+
+  .card-5 {
+    grid-column: 1 / -1; 
+  }
+
+  .first-section,
+  .second-section {
+    display: contents; 
+  }
+}
+
+/* Desktop Layout */
+
+@media only screen and (min-width: 69.625rem) {
+
+  body {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .middle-cards { 
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .testimonials {
+    display: grid;    
+    grid-template-columns: 51.68rem 15.93rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 69.625rem;
+    margin: 0 auto;
+  }
+
+  .testimonials .section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+ .testimonials .first-section {
+    display: grid; 
+    grid-template-columns: 33.75rem 18rem;
+    gap: 1rem;
+  }
+
+  .testimonials .second-section {
+    display: grid; 
+    grid-template-columns: 18rem 33.75rem;
+    gap: 1rem;
+  }
+}
