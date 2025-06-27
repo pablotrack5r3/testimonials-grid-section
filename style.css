@@ -198,7 +198,7 @@ p {
   
   .decoration { 
     display: block;
-  }
+  } 
 
   .testimonials .section {
     display: grid;
@@ -235,6 +235,10 @@ p {
 /* Desktop Layout */
 
 @media only screen and (min-width: 69.625rem) {
+
+  .decoration { 
+    display: block;
+  } 
 
   body {
     display: flex; 
